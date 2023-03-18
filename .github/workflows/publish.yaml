@@ -2,7 +2,7 @@ name: Publish Smarty-ui-vite To Npm
 
 on:
   push:
-    branches: [publish-smarty-ui-vite]
+    branches: [publish]
 
 jobs:
   publish:

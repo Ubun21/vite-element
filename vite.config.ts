@@ -19,7 +19,8 @@ export default defineConfig({
   plugins: [vue(), vueJsx(), Unocss()],
   build: {
     rollupOptions,
-    minify: false,
+    minify: "terser",
+    sourcemap: true,
     cssCodeSplit: true,
     lib: {
       entry: "./src/entry.ts",

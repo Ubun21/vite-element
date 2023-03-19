@@ -19,6 +19,7 @@
   "devDependencies": {
     "@algolia/client-search": "^4.15.0",
     "@iconify-json/ic": "1.1.4",
+    "@types/lodash": "^4.14.191",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
     "@vitejs/plugin-vue": "3.0.3",
@@ -31,12 +32,14 @@
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.9.0",
+    "expect-type": "^0.15.0",
     "happy-dom": "6.0.4",
     "husky": "^8.0.0",
     "prettier": "^2.8.4",
     "terser": "5.4.0",
     "typescript": "^5.0.2",
     "unocss": "0.45.6",
+    "unplugin-vue-macros": "^1.10.1",
     "vite": "3.0.7",
     "vitepress": "0.22.4",
     "vitest": "0.21.1"
@@ -44,6 +47,9 @@
   "dependencies": {
     "@commitlint/cli": "17.0.2",
     "@commitlint/config-conventional": "17.0.2",
+    "@vue/shared": "^3.2.47",
+    "@vueuse/core": "^9.13.0",
+    "lodash": "^4.17.21",
     "vue": "3.2.37"
   }
 }

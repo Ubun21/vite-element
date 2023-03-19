@@ -1,8 +1,8 @@
-/// <reference types="vitest" />
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
+import { defineConfig } from "vitest/config";
+import Vue from "@vitejs/plugin-vue";
+import VueJsx from "@vitejs/plugin-vue-jsx";
 import Unocss from "./unocss.config";
+import VueMacros from "unplugin-vue-macros/vite";
 
 const rollupOptions = {
   external: ["vue", "vue-router"],
@@ -13,10 +13,16 @@ const rollupOptions = {
   },
 };
 
-// https://vitejs.dev/config/
-
 export default defineConfig({
-  plugins: [vue(), vueJsx(), Unocss()],
+  plugins: [
+    VueMacros({
+      plugins: {
+        vue: Vue(),
+        vueJsx: VueJsx(),
+      },
+    }),
+    Unocss(),
+  ],
   build: {
     rollupOptions,
     minify: "terser",

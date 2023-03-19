@@ -15,4 +15,8 @@ jobs:
     - name: Install modules
       run: pnpm install
     - name: Run Test 
-      run: pnpm run test         
+      run: pnpm run test
+    - name: Publish package on NPM 📦
+      run: npm publish
+      env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}       
